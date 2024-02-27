@@ -1,0 +1,22 @@
+[
+      {
+        "Frappacino": [
+          "Pistachio Frappacino",
+          "Caramel Frappacino"
+        ]
+      },
+      {
+        "Coffee": [
+          "Latte",
+          "Cappuccino",
+          "Espresso"
+        ]
+      },
+      {
+        "Tea": [
+          "Chai Tea Latte",
+          "Matcha Tea Latte",
+          "Green Tea"
+        ]
+      }
+]

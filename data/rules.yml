@@ -2,12 +2,19 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Say thanks.
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: thanks
+  - action: utter_thanks
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Asks to explain the different cup sizes. 
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: ask_explain_size
+  - action: utter_explain_size
+
+- rule: Show summary of the order.
+  steps:
+  - intent: name_in_order
+  - action: action_order_summary
+
+

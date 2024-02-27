@@ -2,29 +2,62 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: food_order
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: know_menu
+  - action: action_menu
+  - intent: menu_order_reply
+  - intent: order
+  - action: utter_ask_size
+  - intent: ask_explain_size
+  - action: utter_explain_size
+  - intent: confirm_size
+  - action: utter_name
+  - intent: name_in_order
+  - action: action_order_summary
+  - intent: thanks
+  - action: utter_thanks
 
-- story: sad path 1
+- story: food_order
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: order
+  - action: utter_ask_size
+  - intent: ask_explain_size
+  - action: utter_explain_size
+  - intent: confirm_size
+  - action: utter_name
+  - intent: name_in_order
+  - action: action_order_summary
+  - intent: thanks
+  - action: utter_thanks
 
-- story: sad path 2
+- story: food_order
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: order_with_size
+  - action: utter_name
+  - intent: name_in_order
+  - action: action_order_summary
+  - intent: thanks
+  - action: utter_thanks
+
+- story: food_order
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: know_menu
+  - action: action_menu
+  - intent: menu_order_reply
+  - intent: order
+  - action: utter_ask_size
+  - intent: confirm_size
+  - action: utter_name
+  - intent: name_in_order
+  - action: action_order_summary
+  - intent: thanks
+  - action: utter_thanks

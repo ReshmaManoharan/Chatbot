@@ -17,75 +17,77 @@ nlu:
     - goodevening
     - good afternoon
 
-- intent: goodbye
+- intent: thanks
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - thank you
+    - thanks
+    - thank you so much
 
-- intent: affirm
+- intent: know_menu
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - What are the drinks available now
+    - What are the items in menu today
+    - What do you have?
+    - What's there
+    - What's there in menu?
 
-- intent: deny
+- intent: order
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - I would like to order [tea](drink)
+    - I will have a [coffee](drink)
+    - Can I get a [Frappaccino](drink)
+    - I want a [Chai Tea Latte](drink)
+    - I will take a [Cappucinno](drink)
+    - Please give me a hot [Caramal Frappaccino](drink)
 
-- intent: mood_great
+- intent: menu_order_reply
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Hot [tea](drink)
+    - Cold [coffee](drink)
+    - [Frappaccino](drink)
+    - [Macha Tea Latte](drink)
+    - [Cappucinno](drink)
+    - [Caramal Frappaccino](drink)
+ 
+- intent: confirm_size
+  examples: |
+    - I will take the [grand](size)
+    - I will have the [small](size) one
+    - [Medium](size) please.
+    - [Large](size)
+    - [S](size)
+    - [Small](size)
+    - [Grand](size)
 
-- intent: mood_unhappy
+- intent: ask_explain_size
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Can you please explain the different sizes
+    - How big each size is?
+    - What's the sizes available?
+    - Explain the sizes please.
+    - What size do we have
 
-- intent: bot_challenge
+- intent: order_with_size
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - I would like to order [tea](drink) of size [small](size)
+    - I will have a [grand](size) [coffee](drink)
+    - Can I get a [medium](size) [Frappaccino](drink)
+    - I want a [small](size) cup of [Chai Tea Latte](drink)
+    - I will take a [large](size) [Cappucinno](drink)
+    - Please give me a [medium](size) hot [Caramal Frappaccino](drink)
+
+- intent: name_in_order
+  examples: |
+    - It's [Bhobhu](name)
+    - [Honeybee](name)
+    - Write as [Beebee](name)
+    - [reshma](name)
+    - [ReshmaManoharan](name)
+    - [techie](name)
+    - [Charu](name)
+    - [Sushma](name)
+    - [daliya](name)
+    - [Akshara](name)
+    - [shilpa](name)
+    - [Bhagirathisudharsan](name)
+    - [RameshSundar](name)

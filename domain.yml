@@ -2,32 +2,75 @@ version: "3.1"
 
 intents:
   - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - thanks
+  - know_menu
+  - order
+  - menu_order_reply
+  - order_with_size
+  - confirm_size
+  - ask_explain_size
+  - name_in_order
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: Hey! How can I help you?.
+    - text: Hey there!!. What would you like to have?.
+    - text: Hello!, What would you like to order?
+    - text: Whats up!!. What's the order?
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_thanks:
+    - text: You are welcome"
+    - text: Thanks! Have a good time.
+    - text: Thank you !
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_ask_size:
+    - text: What size do you prefer?
+    - text: Preferred size please.
+    - text: What size do you want?
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_explain_size:
+    - text: "We have the below sizes,
+            Small : 200ml
+            Medium : 300ml
+            Large : 500ml
+            Grand : 750ml
+            What's your choice?"
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_fallback:
+    - text: Sorry, I dont understand
+    - text: Sorry, I m not sure about it
+    - text: I couldnt understand. Can you please re-phrase it
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_name:
+    - text: What's the name on the order?
+    - text: What would you like the order name to be?
+
+slots:
+  drink_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: drink
+  size_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: size
+  buyer_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+
+actions:
+  - action_menu
+  - action_order_summary
+  - action_default_fallback
+
+entities:
+  - drink
+  - size
+  - name
 
 session_config:
   session_expiration_time: 60
